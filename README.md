@@ -1,3 +1,3 @@
 # LuoYun
 
-LuoYun Official Website: [Visit here][/int/zh-cn](https://raw.githubusercontent.com/LuoYunOfficial/LuoYun/master/int/index.html)
+LuoYun Official Website: [Visit here](https://luoyunofficial.github.io/LuoYun/))
