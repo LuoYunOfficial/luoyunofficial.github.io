@@ -85,5 +85,34 @@
     font-style: normal;
     font-family: 'Harmony_Regular';
     /*引入HarmonyOS_Sans_SC，目录别搞错*/
-    src: url('../fonts/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
+    src: url('https://luoyunofficial.github.io/LuoYun/fonts/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
 }
+	ul{
+			list-style-type: none; /*清除无序列表前的小点*/
+			width: auto;
+			height: 50px;
+			background: #3b3753;
+			margin: 0px;
+			padding-left: 20%;/*左边距，使li看起来在中间*/
+			/*position: relative;*/
+			text-align: center;
+		}
+	li{
+			float: left;
+			width: 130px;
+			height: 100%;
+			padding: 0px;
+			margin-right: 1%;  /*两个li之间的距离*/
+		}
+	a:link,a:visited{ /*鼠标未点击和点击过时的样式*/
+			display: block;
+			color: #FFFFFF;
+			background-color: #3b3753;
+			text-align: center;
+			line-height: 30px; /*li行高*/
+			padding: 10px;
+			text-decoration: none; /*去下划线*/
+		}
+	a:hover{ /*鼠标移动到点击位时的样式，active指点击过后的样式*/
+			background-color: #111;
+		}
