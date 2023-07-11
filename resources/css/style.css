@@ -87,3 +87,6 @@
     /*引入HarmonyOS_Sans_SC，目录别搞错*/
     src: url('https://luoyunofficial.github.io/LuoYun/fonts/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf') format('truetype');
 }
+html, body {
+    width: 100%;
+}
