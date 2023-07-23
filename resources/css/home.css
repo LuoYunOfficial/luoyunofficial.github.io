@@ -33,18 +33,6 @@
   height: 100%;
 }
 
-footer {
-  color: gray;
-  text-decoration: none;
-    width: 100%;
-    height:100px;   /* footer的高度一定要是固定值*/ 
-    position:absolute;
-    bottom:0px;
-    left:0px;
-    background: #EDEDED;
-
-}
-
 .okay {
   background: #EDEDED;
   text-align: center;
