@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luoyunofficial.github.io/LuoYun/sitemap.xml
