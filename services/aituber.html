@@ -29,8 +29,6 @@
 		    localStorage.getItem("locale") ||
 		    window.navigator.language.toLowerCase() ||
 		    "en";
-		  //把用户的语言写入缓存，供下次获取使用
-		  localStorage.setItem("locale", language);
 		  //判断用户的语言，跳转到不同的地方
 		  if (typeof window.orientation !== 'undefined') {
                     // 当前设备是移动设备 
