@@ -20,36 +20,6 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;} .languagecn{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} .languageus{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} .languagejp{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;}</style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="https://luoyunofficial.github.io/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="languagecn" style="z-index:999; position: sticky"><p>有中文（简体）版本可用。您可切换至中文（简体）页面以获得更好的体验。</p><a href="https://luoyunofficial.github.io/zh-cn/">前往</a></div>
-    <div class="languageus" style="z-index:999; position: sticky"><p>English (United States) version is available. You can switch to the English (United States) page for a better experience.</p><a href="https://luoyunofficial.github.io/en-us/">Switch to US</a></div>
-    <div class="languagejp" style="z-index:999; position: sticky"><p>日本語版も用意されています。日本語のページに切り替えると、より快適にご利用いただけます。</p><a href="https://luoyunofficial.github.io/ja-jp/">日本語に切り替える</a></div>
-    <script type="text/javascript">
-  //获取用户语言的顺序是
-  //1.获取本地缓存里的内容
-  //2.用户浏览器的语言设置
-  //如果上面2个都没有获取到，就直接使用'en'作为用户选择的语言
-  var language =
-    localStorage.getItem("locale") ||
-    window.navigator.language.toLowerCase() ||
-    "en";
-  //把用户的语言写入缓存，供下次获取使用
-  localStorage.setItem("locale", language);
-  //判断用户的语言，跳转到不同的地方
-  if (language.indexOf("zh-cn") !== -1) {
-    var cla = document.getElementsByClassName("languagecn")[0];
-    cla.style.display="block";
-  } else if (language.indexOf("en-us") !== -1) {
-    var cla = document.getElementsByClassName("languageus")[0];
-    cla.style.display="block";
-  } else if (language.indexOf("ja-jp") !== -1) {
-    var cla = document.getElementsByClassName("languagejp")[0];
-    cla.style.display="block";
-  } else {
-    //其它的都使用英文
-    window.location = "/";
-  }
-    </script>
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container"><span></span><span></span><span></span><span></span>
@@ -65,6 +35,36 @@
           <div class="rd-navbar-wrap">
             <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
               <div class="rd-navbar-main-outer">
+		    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="https://luoyunofficial.github.io/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+		    <div class="languagecn"><p>有中文（简体）版本可用。您可切换至中文（简体）页面以获得更好的体验。</p><a href="https://luoyunofficial.github.io/zh-cn/">前往</a></div>
+		    <div class="languageus"><p>English (United States) version is available. You can switch to the English (United States) page for a better experience.</p><a href="https://luoyunofficial.github.io/en-us/">Switch to US</a></div>
+		    <div class="languagejp"><p>日本語版も用意されています。日本語のページに切り替えると、より快適にご利用いただけます。</p><a href="https://luoyunofficial.github.io/ja-jp/">日本語に切り替える</a></div>
+		    <script type="text/javascript">
+		  //获取用户语言的顺序是
+		  //1.获取本地缓存里的内容
+		  //2.用户浏览器的语言设置
+		  //如果上面2个都没有获取到，就直接使用'en'作为用户选择的语言
+		  var language =
+		    localStorage.getItem("locale") ||
+		    window.navigator.language.toLowerCase() ||
+		    "en";
+		  //把用户的语言写入缓存，供下次获取使用
+		  localStorage.setItem("locale", language);
+		  //判断用户的语言，跳转到不同的地方
+		  if (language.indexOf("zh-cn") !== -1) {
+		    var cla = document.getElementsByClassName("languagecn")[0];
+		    cla.style.display="block";
+		  } else if (language.indexOf("en-us") !== -1) {
+		    var cla = document.getElementsByClassName("languageus")[0];
+		    cla.style.display="block";
+		  } else if (language.indexOf("ja-jp") !== -1) {
+		    var cla = document.getElementsByClassName("languagejp")[0];
+ 		   cla.style.display="block";
+		  } else {
+		    //其它的都使用英文
+		    window.location = "/";
+		  }
+		    </script>
                 <div class="rd-navbar-main">
                   <!-- RD Navbar Panel-->
                   <div class="rd-navbar-panel">
