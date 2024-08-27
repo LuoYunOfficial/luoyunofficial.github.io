@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="https://luoyunofficial.github.io/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="languagecn"><p>有中文（简体）版本可用。</p><a href="https://luoyunofficial.github.io/">前往</a></div>
+    <div class="languagecn"><p>有中文（简体）版本可用。</p><a href="https://luoyunofficial.github.io/zh-cn/">前往</a><p>----</p><a id="close">关闭</a></div>
     <script type="text/javascript">
   //获取用户语言的顺序是
   //1.获取本地缓存里的内容
@@ -47,6 +47,9 @@
     //其它的都使用英文
     window.location = "/index";
   }
+    var close = document.getElementById("btn");
+    var cla = document.getElementsByClassName("languagecn")[0];
+    close.onclick = cla.style.display="none";
     </script>
     <div class="preloader">
       <div class="preloader-body">
