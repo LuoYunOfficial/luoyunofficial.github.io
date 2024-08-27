@@ -19,6 +19,30 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
+    <div class="languagecn"><p>LuoYun AITuber Program可用于中国大陆。各地区的AITuber暂不相同。</p><a href="https://luoyunofficial.github.io/zh-cn/services/aituber">前往中国大陆的LuoYun AITuber Program</a></div>
+    <script type="text/javascript">
+		  //获取用户语言的顺序是
+		  //1.获取本地缓存里的内容
+		  //2.用户浏览器的语言设置
+		  //如果上面2个都没有获取到，就直接使用'en'作为用户选择的语言
+		  var language =
+		    localStorage.getItem("locale") ||
+		    window.navigator.language.toLowerCase() ||
+		    "en";
+		  //把用户的语言写入缓存，供下次获取使用
+		  localStorage.setItem("locale", language);
+		  //判断用户的语言，跳转到不同的地方
+		  if (typeof window.orientation !== 'undefined') {
+                    // 当前设备是移动设备 
+                  } else {
+                  if (language.indexOf("zh-cn") !== -1) {
+		    var cla = document.getElementsByClassName("languagecn")[0];
+		    cla.style.display="block";
+		  } else {
+		    //其它的都使用英文
+		  }
+		  }
+    </script>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="https://luoyunofficial.github.io/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
