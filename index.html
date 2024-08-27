@@ -2,11 +2,27 @@
 <html class="wide wow-animation" lang="en">
   <head>
     <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "iaei4yadqn");
+  //获取用户语言的顺序是
+  //1.获取本地缓存里的内容
+  //2.用户浏览器的语言设置
+  //如果上面2个都没有获取到，就直接使用'en'作为用户选择的语言
+  var language =
+    localStorage.getItem("locale") ||
+    window.navigator.language.toLowerCase() ||
+    "en";
+  //把用户的语言写入缓存，供下次获取使用
+  localStorage.setItem("locale", language);
+  //判断用户的语言，跳转到不同的地方
+  if (language.indexOf("zh-cn") !== -1) {
+    window.location = "/zh-cn/index";
+  } else if (language.indexOf("en-us") !== -1) {
+    window.location = "/en-us/index";
+  } else if (language.indexOf("ja-jp") !== -1) {
+    window.location = "/ja-jp/index";
+  } else {
+    //其它的都使用英文
+    window.location = "/index";
+  }
     </script>
     <meta name="msvalidate.01" content="6FF4C21836697852E9A608FEB3030F9B" />
     <title>LuoYun - From Here to the Universe</title>
