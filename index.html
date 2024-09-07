@@ -17,13 +17,14 @@
     <link rel="stylesheet" href="https://luoyunofficial.github.io/css/bootstrap.css">
     <link rel="stylesheet" href="https://luoyunofficial.github.io/css/fonts.css">
     <link rel="stylesheet" href="https://luoyunofficial.github.io/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;} .languagecn{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} .languageus{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} .languagejp{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;}</style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;} .language{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;}</style>
   </head>
   <body>
     		    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="https://luoyunofficial.github.io/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-		    <div class="languagecn"><p>有中文（简体）版本可用。您可切换至中文（简体）页面以获得更好的体验。</p><a href="https://luoyunofficial.github.io/zh-cn/">前往</a></div>
-		    <div class="languageus"><p>English (United States) version is available. You can switch to the English (United States) page for a better experience.</p><a href="https://luoyunofficial.github.io/en-us/">Switch to US</a></div>
-		    <div class="languagejp"><p>日本語版も用意されています。日本語のページに切り替えると、より快適にご利用いただけます。</p><a href="https://luoyunofficial.github.io/ja-jp/">日本語に切り替える</a></div>
+		    <div class="language cn"><p>有中文（简体）版本可用。您可切换至中文（简体）页面以获得更好的体验。</p><a href="https://luoyunofficial.github.io/zh-cn/">前往中国大陆的LuoYun</a></div>
+		    <div class="language us"><p>English (United States) version is available. You can switch to the English (United States) page for a better experience.</p><a href="https://luoyunofficial.github.io/en-us/">Switch to US</a></div>
+		    <div class="language jp"><p>日本語版も用意されています。日本語のページに切り替えると、より快適にご利用いただけます。</p><a href="https://luoyunofficial.github.io/ja-jp/">日本語に切り替える</a></div>
+	            <div class="language zhhk"><p>有中文（繁體）版本可用。您可切換至中文（繁體）頁面以獲得更好的體驗。</p><a href="https://luoyunofficial.github.io/zh-hk/">使用中文繁體的LuoYun</a></div>
 		    <script type="text/javascript">
 		  //获取用户语言的顺序是
 		  //1.无
@@ -37,13 +38,16 @@
                     // 当前设备是移动设备 
                   } else {
                   if (language.indexOf("zh-cn") !== -1) {
-		    var cla = document.getElementsByClassName("languagecn")[0];
+		    var cla = document.getElementsByClassName("language cn")[0];
 		    cla.style.display="block";
 		  } else if (language.indexOf("en-us") !== -1) {
-		    var cla = document.getElementsByClassName("languageus")[0];
+		    var cla = document.getElementsByClassName("language us")[0];
 		    cla.style.display="block";
 		  } else if (language.indexOf("ja") !== -1) {
-		    var cla = document.getElementsByClassName("languagejp")[0];
+		    var cla = document.getElementsByClassName("language jp")[0];
+ 		    cla.style.display="block";
+		  } else if (language.indexOf("zh-hk") !== -1) {
+		    var cla = document.getElementsByClassName("language zhhk")[0];
  		    cla.style.display="block";
 		  } else {
 		    //其它的都使用英文
