@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="https://luoyunofficial.github.io/css/bootstrap.css">
     <link rel="stylesheet" href="https://luoyunofficial.github.io/css/fonts.css">
     <link rel="stylesheet" href="https://luoyunofficial.github.io/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;} .languagecn{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} </style>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;} .language{display: none;background: #ffffff;padding: 30px 0;box-shadow: 3px 1px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} </style>
   </head>
   <body>
-    <div class="languagecn"><p>LuoYun AITuber Program可用于中国大陆。各地区的AITuber暂不相同。</p><a href="https://luoyunofficial.github.io/zh-cn/services/aituber">前往中国大陆的LuoYun AITuber Program</a></div>
+    <div class="language cn"><p>LuoYun AITuber Program可用于中国大陆。各地区的AITuber暂不相同。</p><a href="https://luoyunofficial.github.io/zh-cn/services/aituber">前往中国大陆的LuoYun AITuber Program</a></div>
+    <div class="language zhhk"><p>LuoYun AITuber Program可用於中國香港。各地區的AITuber暫不相同。</p><a href="https://luoyunofficial.github.io/zh-hk/services/aituber">前往中國香港的LuoYun AITuber Program</a></div>
     <script type="text/javascript">
 		  //获取用户语言的顺序是
 		  //1.
@@ -33,9 +34,12 @@
                     // 当前设备是移动设备 
                   } else {
                   if (language.indexOf("zh-cn") !== -1) {
-		    var cla = document.getElementsByClassName("languagecn")[0];
+		    var cla = document.getElementsByClassName("language cn")[0];
 		    cla.style.display="block";
-		  } else {
+		  } else if (language.indexOf("zh-hk") !== -1) {
+		    var cla = document.getElementsByClassName("language zhhk")[0];
+ 		    cla.style.display="block";
+		  }else {
 		    //其它的都使用英文
 		  }
 		  }
